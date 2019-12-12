@@ -1,8 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
 const renderInput = type => {
-  switch(type) {
+  switch (type) {
     case 'text':
       return 'text';
     case 'submit':
@@ -10,7 +9,7 @@ const renderInput = type => {
     default:
       throw new Error('Input must be on of [text, submit]'); // just in case
   }
-}
+};
 
 const Input = ({ type }) => renderInput(type);
 
@@ -19,5 +18,5 @@ Input.propTypes = {
 };
 Input.defaultProps = {
   type: 'text',
-}
+};
 export default Input;
