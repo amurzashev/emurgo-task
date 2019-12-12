@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { ThemeProvider } from 'emotion-theming';
+import Navbar from './components/organisms/Navbar';
+import theme from './helpers/theme';
+import pages from './components/pages';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+export default () => (
+  <BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <Navbar />
+      <Switch>
+        {pages.map(page => <Route {...page} />)}
+      </Switch>
+    </ThemeProvider>
+  </BrowserRouter>
+);
