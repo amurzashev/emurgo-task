@@ -4,7 +4,7 @@ import { ThemeProvider } from 'emotion-theming';
 import theme from './helpers/theme';
 import pages from './components/pages';
 
-const App = () => (
+export default () => (
   <BrowserRouter>
     <Switch>
       <ThemeProvider theme={theme}>
@@ -13,5 +13,3 @@ const App = () => (
     </Switch>
   </BrowserRouter>
 );
-
-export default App;
