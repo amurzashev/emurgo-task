@@ -11,7 +11,7 @@ const getFontSize = props => {
     case 'xl':
       return 18;
     case 'xxl':
-      return 20;
+      return 42;
     default:
       return 16;
   }
@@ -19,6 +19,8 @@ const getFontSize = props => {
 
 const getFontWeight = props => {
   switch (props.weight) {
+    case 'bold':
+      return 'bold';
     default:
       return 'initial';
   }

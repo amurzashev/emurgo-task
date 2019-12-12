@@ -6,6 +6,7 @@ export default styled.button`
   border-radius: 3px;
   padding: ${props => props[props.padding] || '0 54px'};
   color: ${props => props.theme.colors[props.color || 'primary']};
+  background: transparent;
   text-transform: uppercase;
   font-weight: bold;
   box-sizing: border-box;

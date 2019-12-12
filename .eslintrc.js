@@ -26,4 +26,11 @@ module.exports = {
     "arrow-parens": "off",
     "react/jsx-props-no-spreading": "off"
   },
+  settings: {
+    "import/resolver": {
+      node: {
+        paths: ["src"]
+      }
+    },
+  },
 };

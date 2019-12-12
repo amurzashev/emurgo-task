@@ -8,4 +8,5 @@ export default styled.div`
   ${props => props.theme.breakpoints.mobile} {
     padding: 0 40px;
   }
+  height: ${props => (props.fullHeight ? '100vh' : 'initial')};
 `;
