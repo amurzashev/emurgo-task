@@ -2,6 +2,16 @@ import styled from '@emotion/styled';
 
 const getFontSize = props => {
   switch (props.size) {
+    case 's':
+      return 12;
+    case 'm':
+      return 14;
+    case 'l':
+      return 16;
+    case 'xl':
+      return 18;
+    case 'xxl':
+      return 20;
     default:
       return 16;
   }
