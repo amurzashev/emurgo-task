@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const renderInput = type => {
   switch(type) {
@@ -7,10 +8,16 @@ const renderInput = type => {
     case 'submit':
       return 'submit';
     default:
-      throw new Error('Input must be on of [text, submit]')
+      throw new Error('Input must be on of [text, submit]'); // just in case
   }
 }
 
-export default () => {
+const Input = ({ type }) => renderInput(type);
 
+Input.propTypes = {
+  type: PropTypes.oneOf(['text', 'submit']),
 };
+Input.defaultProps = {
+  type: 'text',
+}
+export default Input;
