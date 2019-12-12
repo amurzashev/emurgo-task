@@ -8,7 +8,7 @@ const Wrapper = styled(Fluid)`
   top: 0;
   left: 0;
   right: 0;
-  background: red;
+  background: transparent;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
